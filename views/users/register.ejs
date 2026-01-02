@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include("../includes/flash.ejs") %>
+    <form action="/register" method="POST" class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEmail4"
+          name="username"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail4"
+          name="email"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword4"
+          name="password"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" name="city" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Category</label>
+        <select id="inputState" class="form-select" name="category">
+          <option selected>Select</option>
+          <option>Education</option>
+          <option>Health</option>
+          <option>Writer</option>
+          <option>Entrepreneur</option>
+          <option>Sport</option>
+          <option>Entertainment</option>
+          <option>Blogger</option>
+          <option>other</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </div>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <form action="/login" method="GET">
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
