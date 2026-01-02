@@ -6,7 +6,8 @@ import methodOverride from "method-override";
 import { connect } from "mongoose";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-
+import dotenv from "dotenv";
+dotenv.config();
 import postRouter from "./routes/post.js";
 import userRouter from "./routes/user.js";
 
@@ -24,7 +25,7 @@ app.use(methodOverride("_method"));
 app.use(cookieParser());
 
 const connectionDb = await connect(
-  "mongodb+srv://krushnakedar641_db_user:SeetaRam123@zoom.epvlyti.mongodb.net/"
+  "proccess.env.MONGO_URI"
 );
 console.log(`MONGO connected DB Host : ${connectionDb.connection.host}`);
 
